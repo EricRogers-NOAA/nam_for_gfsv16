@@ -78,7 +78,7 @@ if [ $HYB_ENS = ".true." ]; then
     # Get 81 members, including the mean, best available (not necessarily valid at adate), store their paths in filelist${nhr_assimilation}
     #  and link the ensemble mean to the provide 03 filename
     #  Will not write an output file if nens members do not exist
-    python $UTIL_USHnam/getbest_EnKF_gfsv16_linkfiles.py -v $adate --exact=no --minsize=${nens} -m yes -d ${COMINgfs}/enkfgdas -o filelist${nhr_assimilation} --o3fname=gfs_sigf${nhr_assimilation} --gfs_netcdf=yes
+    python $UTIL_USHnam/getbest_EnKF_linkfiles.py -v $adate --exact=no --minsize=${nens} -m yes -d ${COMINgfs}/enkfgdas -o filelist${nhr_assimilation} --o3fname=gfs_sigf${nhr_assimilation} --gfs_netcdf=yes
 fi
 
 sync
