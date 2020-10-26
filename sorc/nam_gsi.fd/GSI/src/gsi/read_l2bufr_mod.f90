@@ -278,12 +278,13 @@ contains
 !   Open bufr file with openbf to initialize bufr table, etc in bufrlib
     inbufr=10
     open(inbufr,file=infile,form='unformatted')
-    read(inbufr,iostat=iret)subset
-    if(iret/=0) then
-       if(rite) write(6,*)'RADAR_BUFR_READ_ALL:  problem opening level 2 bufr file "l2rwbufr"'
-       close(inbufr)                                       
-       return
-    end if
+!   read(inbufr,iostat=iret)subset
+!   write(6,*)'radar sliu::', iret,subset
+!   if(iret/=0) then
+!      if(rite) write(6,*)'RADAR_BUFR_READ_ALL:  problem opening level 2 bufr file "l2rwbufr"'
+!      close(inbufr)                                       
+!      return
+!   end if
     rewind inbufr
     lundx=inbufr
     call openbf(inbufr,'IN',lundx)
