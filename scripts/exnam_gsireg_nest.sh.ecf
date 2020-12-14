@@ -105,14 +105,14 @@ if [ $GUESS = GDAS -a ${tmmark} = tm06 ] ; then
   vs=0.6
   refflag=-1
   berror=$FIXnam/nam_nmmstat_na_glberror.gcv
-  anavinfo=$HOMEnam/fix/anavinfo_nems_nmmb_glb
+  anavinfo=$FIXnam/anavinfo_nems_nmmb_glb
 
 else
 
   vs=1.0
   fstat=.true.
   berror=$FIXnam/nam_nmmstat_na.gcv
-  anavinfo=$HOMEnam/fix/anavinfo_nems_nmmb
+  anavinfo=$FIXnam/anavinfo_nems_nmmb
 
   # Get radar Ref file if it is available
 
@@ -143,7 +143,7 @@ if [ $tmmark = tm00 -a $RUNTYPE = CATCHUP ] ; then
       refflag=-1
     fi
     berror=$FIXnam/nam_nmmstat_na_glberror.gcv
-    anavinfo=$HOMEnam/fix/anavinfo_nems_nmmb_glb
+    anavinfo=$FIXnam/anavinfo_nems_nmmb_glb
   fi
 fi
 
@@ -367,17 +367,17 @@ emiscoef_MWwater=$FIXCRTM/FASTEM6.MWwater.EmisCoeff.bin
 aercoef=$FIXCRTM/AerosolCoeff.bin
 cldcoef=$FIXCRTM/CloudCoeff.bin
 
-satinfo=$HOMEnam/fix/nam_regional_satinfo.txt
+satinfo=$FIXnam/nam_regional_satinfo.txt
 scaninfo=$FIXnam/nam_regional_scaninfo.txt
 
-pcpinfo=$HOMEnam/fix/nam_global_pcpinfo.txt
-ozinfo=$HOMEnam/fix/nam_global_ozinfo.txt
+pcpinfo=$FIXnam/nam_global_pcpinfo.txt
+ozinfo=$FIXnam/nam_global_ozinfo.txt
 errtable=$FIXnam/nam_errtable.r3dv
-convinfo=$HOMEnam/fix/nam_regional_convinfo.txt
-mesonetuselist=$HOMEnam/fix/nam_mesonet_uselist.txt
-stnuselist=$HOMEnam/fix/nam_mesonet_stnuselist.txt
-atmsfilter=$HOMEnam/fix/atms_beamwidth.txt
-locinfo=$HOMEnam/fix/nam_hybens_d01_info
+convinfo=$FIXnam/nam_regional_convinfo.txt
+mesonetuselist=$FIXnam/nam_mesonet_uselist.txt
+stnuselist=$FIXnam/nam_mesonet_stnuselist.txt
+atmsfilter=$FIXnam/atms_beamwidth.txt
+locinfo=$FIXnam/nam_hybens_d01_info
 
 qdaylist=$FIXnam/q_day_rejectlist
 qnightlist=$FIXnam/q_night_rejectlist
