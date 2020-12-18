@@ -1004,7 +1004,7 @@ export pgm=nam_nems_nmmb_gsi
 . prep_step
 
 startmsg
-${MPIEXEC} /gpfs/dell2/emc/modeling/noscrub/emc.campara/nam.v4.1.10/exec/nam_gsi_newcode < gsiparm.anl >> $pgmout 2>errfile
+${MPIEXEC} $EXECnam/nam_gsi < gsiparm.anl >> $pgmout 2>errfile
 export err=$?;err_chk
 
 mv fort.201 fit_p1
